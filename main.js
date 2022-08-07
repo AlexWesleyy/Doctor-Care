@@ -40,4 +40,6 @@ ScrollReveal({
 #services .card,
 #about,
 #about header,
-#about .tela .content`);
+#about .tela .content,
+#contact,
+footer`);
