@@ -1,8 +1,10 @@
 window.addEventListener('scroll', onScroll)
 
-function onScroll(){
-    showNavOnScroll()
-    showBackToButtonOnScroll()
+onScroll()
+
+function onScroll() {
+  showNavOnScroll()
+  showBackToTopButtonOnScroll()
 }
 function showNavOnScroll(){
     const elemento = document.getElementById("navigation");
@@ -12,34 +14,33 @@ function showNavOnScroll(){
         elemento.classList.remove("scroll");
     }
 }
-function showBackToButtonOnScroll(){
-    const elemento = document.getElementById("back-to-top");
-    if (scrollY>500){
-        elemento.classList.add("show");
+function showBackToTopButtonOnScroll() {
+    if(scrollY > 400) {
+      backToTopButton.classList.add("show")
     }else{
-        elemento.classList.remove("show");
+      backToTopButton.classList.remove("show")
     }
-}
-function openMenu(){
-    document.body.classList.add('menu-expanded')
-}
-function closeMenu(){
-    document.body.classList.remove('menu-expanded')
-}
-
-ScrollReveal({
+  }
+  
+  function openMenu() {
+    document.body.classList.add("menu-expanded")
+  }
+  
+  function closeMenu() {
+    document.body.classList.remove("menu-expanded")
+  }
+  
+  ScrollReveal({
     origin: 'top',
     distance: '30px',
     duration: 700,
-}).reveal(`
-#home, 
-#home img, 
-#home .stats, 
-#services,
-#services .cabecario,
-#services .card,
-#about,
-#about header,
-#about .tela .content,
-#contact,
-footer`);
+  }).reveal(`
+    #home, 
+    #home img, 
+    #home .stats, 
+    #services,
+    #services header,
+    #services .card,
+    #about,
+    #about header,
+    #about .content`)
