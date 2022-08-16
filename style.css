@@ -6,7 +6,7 @@
   }
   
   :root {
-    --hue: 210;
+    --hue: 190;
     --primary-color: hsl(var(--hue), 100%, 26%);
     --headline: hsl(210, 11%, 15%);
     --paragraph: hsl(210, 9%, 31%);
@@ -544,6 +544,9 @@
       color: white;
       border-color: white;
     }
+    nav#navigation .menu li a{
+        transition: opacity .4s;
+    }
     nav#navigation .menu li a:hover{
         opacity: 1;
         font-weight: 700;
@@ -568,5 +571,8 @@
     nav#navigation .menu li a:hover::after{
         padding-inline: 0.8rem;
         width: 100%;
+    }
+    nav#navigation.scroll .menu li a:hover{
+        opacity: 1;
     }
   }
